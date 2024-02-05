@@ -19,20 +19,11 @@ export default function App() {
 
   const completeTask = (index) => {
     let itemsCopy = [...taskItems];
-    // itemsCopy.splice(index, 1);
     itemsCopy[index].completed = !itemsCopy[index].completed;
     setTaskItems(itemsCopy);
   }
 
   const deleteTask = (index) => {
-    // Alert.alert(
-    //   "Delete Task",
-    //   "Are you sure you want to delete this task?",
-    //   [
-    //     { text: "Delete", onPress: () => handleDeleteTask(index) },
-    //     { text: "Cancel", style: "cancel" }
-    //   ]
-    // )
     setDeleteModalVisible(true);
   }
   const handleDeleteTask = (index) => {
@@ -167,8 +158,8 @@ const styles = StyleSheet.create({
     width: 60,
     height: 30,
     borderRadius: 5,
-    justifyContent: 'center', // Metni yatay eksende ortalar
-    color: 'white', // Yazı rengi beyaz
+    justifyContent: 'center',
+    color: 'white',
     backgroundColor: '#756AB6',
   },
   deleteButton: {
@@ -178,8 +169,8 @@ const styles = StyleSheet.create({
     width: 60,
     height: 30,
     borderRadius: 5,
-    justifyContent: 'center', // Metni yatay eksende ortalar
-    color: '#756AB6', // Yazı rengi beyaz
+    justifyContent: 'center',
+    color: '#756AB6',
     backgroundColor: '#fff',
     borderColor:'#756AB6',
     borderWidth: 2
